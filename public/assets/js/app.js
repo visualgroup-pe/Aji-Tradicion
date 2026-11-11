@@ -2,6 +2,11 @@
   'use strict';
   document.documentElement.classList.add('js');
 
+  // "preview" = versión estática (GitHub Pages): sin servidor, no hay pagos.
+  var modeMeta = document.querySelector('meta[name="aji-mode"]');
+  var PREVIEW = Boolean(modeMeta && modeMeta.content === 'preview');
+  var PREVIEW_MSG = 'Vista previa: el pago con Mercado Pago se activa cuando la página corre en su servidor. Aquí no se realiza ningún cobro.';
+
   // ---------- Header con borde al hacer scroll + barra fija móvil ----------
   var header = document.querySelector('[data-header]');
   var sticky = document.querySelector('[data-sticky]');
@@ -95,6 +100,8 @@
       if (!EMAIL_RE.test(email)) { msg.textContent = 'Revisa tu correo: lo necesitamos para enviarte el recetario.'; form.email.focus(); return; }
       if (!form.terms.checked) { msg.textContent = 'Para continuar, acepta los términos y la política de privacidad.'; form.terms.focus(); return; }
 
+      if (PREVIEW) { msg.textContent = PREVIEW_MSG; return; }
+
       submit.setAttribute('aria-busy', 'true');
       var original = label.textContent;
       label.textContent = 'Preparando tu pago…';
@@ -127,6 +134,7 @@
       var out = resend.querySelector('.form-msg');
       var email = resend.email.value.trim();
       if (!EMAIL_RE.test(email)) { out.textContent = 'Ingresa un correo válido.'; return; }
+      if (PREVIEW) { out.textContent = PREVIEW_MSG; return; }
       var btn = resend.querySelector('button');
       btn.setAttribute('aria-busy', 'true');
       fetch('/api/reenviar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email }) })

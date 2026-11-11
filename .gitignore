@@ -7,3 +7,4 @@ private/*
 !private/.gitkeep
 *.log
 .DS_Store
+dist/

@@ -99,6 +99,14 @@ NODE_ENV=production npm start
 - El almacén de pedidos es un archivo JSON pensado para **una sola instancia**. Para varias instancias, reemplaza `src/store.js` por una base de datos con la misma interfaz.
 - Revisa `GET /healthz` tras desplegar: indica el modo de pago y si el PDF existe.
 
+## Vista previa en GitHub Pages
+
+GitHub Pages solo sirve archivos estáticos, así que publica una **vista previa del diseño**: la página completa, pero sin pagos (el botón de compra muestra un aviso) y sin el PDF. La venta real necesita el servidor Node descrito arriba.
+
+- El workflow `.github/workflows/pages.yml` ejecuta las pruebas, genera `dist/` con `node scripts/build-static.js` y lo publica en cada push.
+- Requisito único: en **Settings → Pages → Build and deployment → Source** elige **GitHub Actions**.
+- Generarla en local: `node scripts/build-static.js` (salida en `dist/`).
+
 ## Antes de publicar: lista de verificación
 
 - [ ] **Contenido fiel al PDF.** Revisa en `public/index.html` los platos nombrados (galería y tarjeta “Y mucho más”, marcada con `<!-- EDITAR -->`) y la frase “del ceviche al ají de gallina”: deben estar en tu recetario. No se mencionan videos, clases ni bonos porque el producto no los incluye.
