@@ -3,7 +3,7 @@
 // En esta versión no hay servidor: el botón de compra muestra un aviso y
 // no se procesa ningún pago (el PDF no se incluye en ningún caso).
 //
-// Uso: PAGES_URL=https://usuario.github.io/repo node scripts/build-static.js
+// Uso: PAGES_URL=https://usuario.github.io/repo node scripts/build-static.js [--out dist|docs]
 
 const fs = require('fs');
 const path = require('path');
@@ -13,7 +13,8 @@ const pagesUrl = (process.env.PAGES_URL || 'https://visualgroup-pe.github.io/Aji
 process.env.BASE_URL = pagesUrl;
 
 const { renderTemplate, PUBLIC, ROOT } = require('../src/render');
-const OUT = path.join(ROOT, 'dist');
+const outArg = process.argv.indexOf('--out');
+const OUT = path.resolve(ROOT, outArg > -1 ? process.argv[outArg + 1] : 'dist');
 
 const overrides = {
   SITE_MODE: 'preview',

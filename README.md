@@ -104,8 +104,9 @@ NODE_ENV=production npm start
 GitHub Pages solo sirve archivos estáticos, así que publica una **vista previa del diseño**: la página completa, pero sin pagos (el botón de compra muestra un aviso) y sin el PDF. La venta real necesita el servidor Node descrito arriba.
 
 - El workflow `.github/workflows/pages.yml` ejecuta las pruebas, genera `dist/` con `node scripts/build-static.js` y lo publica en cada push.
-- Requisito único: en **Settings → Pages → Build and deployment → Source** elige **GitHub Actions**.
-- Generarla en local: `node scripts/build-static.js` (salida en `dist/`).
+- Recomendado: en **Settings → Pages → Build and deployment → Source** elige **GitHub Actions**; así se publica siempre la última versión automáticamente.
+- Si Pages está en modo **Deploy from a branch** (raíz o `/docs`), también funciona: la carpeta `docs/` contiene la vista previa ya generada y `index.html` en la raíz redirige a ella. Tras cambiar la landing, regenérala con `npm run build:pages` y haz commit de `docs/`.
+- Generarla en local sin tocar `docs/`: `node scripts/build-static.js` (salida en `dist/`).
 
 ## Antes de publicar: lista de verificación
 

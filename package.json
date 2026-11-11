@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node --env-file-if-exists=.env server.js",
     "dev": "PAYMENT_MODE=demo node --env-file-if-exists=.env --watch server.js",
-    "test": "node --test test/*.test.js"
+    "test": "node --test test/*.test.js",
+    "build:pages": "node scripts/build-static.js --out docs"
   },
   "repository": {
     "type": "git",
