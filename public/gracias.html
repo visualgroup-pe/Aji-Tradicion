@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Tu compra · Ají Tradición</title>
+  <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="msg-page">
+  <main class="msg-card" data-thanks aria-live="polite">
+    <a href="/"><img src="/assets/brand/logo-horizontal.svg" alt="Ají Tradición" width="226" height="64"></a>
+
+    <!-- Verificando -->
+    <section data-state="checking" class="thanks__state">
+      <div class="thanks__icon thanks__icon--wait"><div class="spinner" aria-hidden="true"></div></div>
+      <h1>Estamos confirmando tu pago…</h1>
+      <p>Esto suele tomar unos segundos. No cierres esta página.</p>
+    </section>
+
+    <!-- Pagado -->
+    <section data-state="paid" class="thanks__state" hidden>
+      <div class="thanks__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+      <h1>¡Listo! Tu recetario te espera.</h1>
+      <p>Gracias por tu compra. Descarga tus <strong>100 recetas peruanas</strong> en PDF y guárdalas en tu equipo.</p>
+      <a class="btn btn--primary btn--lg" data-download href="#">Descargar mi recetario (PDF)</a>
+      <p class="thanks__meta" data-download-meta></p>
+    </section>
+
+    <!-- Pendiente -->
+    <section data-state="pending" class="thanks__state" hidden>
+      <div class="thanks__icon thanks__icon--wait"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div>
+      <h1>Tu pago está pendiente</h1>
+      <p>Cuando Mercado Pago confirme tu pago, se habilitará tu descarga en esta misma página. Si pagaste con un medio en efectivo, puede tardar un poco más en acreditarse.</p>
+      <p class="thanks__meta">Guarda el enlace de esta página para volver más tarde.</p>
+      <button class="btn btn--ghost" type="button" data-retry-check>Volver a verificar</button>
+    </section>
+
+    <!-- Rechazado -->
+    <section data-state="failed" class="thanks__state" hidden>
+      <div class="thanks__icon thanks__icon--fail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg></div>
+      <h1>El pago no se completó</h1>
+      <p>No se realizó ningún cobro por este pedido. Puedes intentarlo otra vez con el mismo u otro medio de pago.</p>
+      <a class="btn btn--primary btn--lg" href="/#comprar">Intentar de nuevo</a>
+    </section>
+
+    <!-- No encontrado -->
+    <section data-state="missing" class="thanks__state" hidden>
+      <h1>No encontramos tu pedido</h1>
+      <p>Si ya pagaste, escríbenos a <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a> con el correo de tu compra y te ayudamos.</p>
+      <a class="btn btn--ghost" href="/">Volver al inicio</a>
+    </section>
+
+    <p class="fineprint fineprint--center">¿Dudas? <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a></p>
+  </main>
+  <script src="/assets/js/gracias.js" defer></script>
+</body>
+</html>

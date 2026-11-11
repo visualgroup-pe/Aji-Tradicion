@@ -1,0 +1,28 @@
+{
+  "name": "aji-tradicion",
+  "version": "1.0.0",
+  "description": "Landing page y venta segura del recetario digital Ají Tradición (100 recetas peruanas).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "dev": "PAYMENT_MODE=demo node --env-file-if-exists=.env --watch server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/visualgroup-pe/Aji-Tradicion.git"
+  },
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/visualgroup-pe/Aji-Tradicion/issues"
+  },
+  "homepage": "https://github.com/visualgroup-pe/Aji-Tradicion#readme",
+  "dependencies": {
+    "express": "^4.22.3",
+    "nodemailer": "^6.10.1"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22.9"
+  }
+}

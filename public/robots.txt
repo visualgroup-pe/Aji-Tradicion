@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /descargar/
+Disallow: /gracias
+Disallow: /api/

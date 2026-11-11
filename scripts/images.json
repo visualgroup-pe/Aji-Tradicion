@@ -1,0 +1,133 @@
+[
+ {
+  "name": "hero-ceviche",
+  "src": "pexels/31495671.jpg",
+  "widths": [
+   800,
+   1280,
+   1920
+  ]
+ },
+ {
+  "name": "ceviche",
+  "src": "pexels/28448397.jpg",
+  "crop": [
+   0,
+   0.12,
+   1,
+   0.95
+  ],
+  "widths": [
+   480,
+   800,
+   1200
+  ]
+ },
+ {
+  "name": "lomo-saltado",
+  "src": "pexels/28503593.jpg",
+  "widths": [
+   480,
+   800,
+   1200,
+   1600
+  ]
+ },
+ {
+  "name": "causa-limena",
+  "src": "pexels/28448368.jpg",
+  "crop": [
+   0,
+   0.1,
+   1,
+   0.92
+  ],
+  "widths": [
+   480,
+   800,
+   1200
+  ]
+ },
+ {
+  "name": "ceviche-preparacion",
+  "src": "pexels/16931502.jpg",
+  "widths": [
+   480,
+   800,
+   1200
+  ]
+ },
+ {
+  "name": "jalea",
+  "src": "pexels/29721138.jpg",
+  "widths": [
+   480,
+   800,
+   1200
+  ]
+ },
+ {
+  "name": "tiradito",
+  "src": "pexels/28490851.jpg",
+  "crop": [
+   0,
+   0.08,
+   1,
+   0.92
+  ],
+  "widths": [
+   480,
+   800,
+   1200
+  ]
+ },
+ {
+  "name": "ingredientes-andinos",
+  "src": "pexels/32407761.jpg",
+  "widths": [
+   640,
+   1024,
+   1600
+  ]
+ },
+ {
+  "name": "ajies",
+  "src": "pexels/1132600.jpg",
+  "widths": [
+   640,
+   1024,
+   1600,
+   2400
+  ]
+ },
+ {
+  "name": "pescado-frito",
+  "src": "pexels/16931505.jpg",
+  "crop": [
+   0,
+   0.14,
+   1,
+   1
+  ],
+  "widths": [
+   480,
+   800,
+   1200
+  ]
+ },
+ {
+  "name": "leche-de-tigre",
+  "src": "pexels/28490842.jpg",
+  "crop": [
+   0.12,
+   0,
+   0.62,
+   1
+  ],
+  "widths": [
+   480,
+   800,
+   1000
+  ]
+ }
+]
