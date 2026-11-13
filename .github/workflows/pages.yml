@@ -28,7 +28,7 @@ jobs:
       - id: pages
         uses: actions/configure-pages@v5
       - name: Generar sitio estático
-        run: node scripts/build-static.js
+        run: node scripts/build-site.js --target pages --out dist
         env:
           PAGES_URL: ${{ steps.pages.outputs.base_url }}
       - uses: actions/upload-pages-artifact@v3

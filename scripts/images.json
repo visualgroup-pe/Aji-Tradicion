@@ -116,18 +116,25 @@
   ]
  },
  {
-  "name": "leche-de-tigre",
-  "src": "pexels/28490842.jpg",
-  "crop": [
-   0.12,
-   0,
-   0.62,
-   1
-  ],
+  "name": "pdf-capitulo",
+  "src": "pdfprev/pg-04.png",
   "widths": [
-   480,
-   800,
-   1000
-  ]
+   640,
+   1000,
+   1400
+  ],
+  "q_webp": 82,
+  "q_avif": 60
+ },
+ {
+  "name": "pdf-recetas",
+  "src": "pdfprev/pg-09.png",
+  "widths": [
+   640,
+   1000,
+   1400
+  ],
+  "q_webp": 82,
+  "q_avif": 60
  }
 ]

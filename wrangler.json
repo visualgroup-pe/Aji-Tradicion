@@ -1,0 +1,35 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aji-tradicion",
+  "main": "worker/index.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none"
+  },
+  "kv_namespaces": [
+    { "binding": "KV", "id": "REEMPLAZAR_CON_ID_DEL_NAMESPACE" }
+  ],
+  "observability": { "enabled": true },
+  "vars": {
+    "PAYMENT_MODE": "mercadopago",
+    "PRODUCT_ID": "recetario-100-recetas-peruanas",
+    "PRODUCT_NAME": "Recetario Ají Tradición: 100 recetas peruanas",
+    "PRICE_PEN": "29.90",
+    "COMPARE_PRICE_PEN": "",
+    "PDF_KV_KEY": "file:recetario-100-recetas-peruanas.pdf",
+    "PDF_DOWNLOAD_NAME": "Aji-Tradicion-100-recetas-peruanas.pdf",
+    "DOWNLOAD_TTL_HOURS": "72",
+    "DOWNLOAD_MAX": "5",
+    "MP_STATEMENT_DESCRIPTOR": "AJITRADICION",
+    "CONTACT_EMAIL": "hola@example.com",
+    "CONTACT_WHATSAPP": "",
+    "BUSINESS_NAME": "Ají Tradición",
+    "BUSINESS_RUC": "",
+    "COMPLAINTS_BOOK_URL": "",
+    "MAIL_FROM": "",
+    "PUBLIC_URL": ""
+  }
+}
